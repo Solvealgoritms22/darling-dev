@@ -92,4 +92,4 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 
 Darling Fajardo  
 ✉️ [Correo Electrónico](mailto:darlingf1998@gmail.com)  
-🌐 [Portafolio](https://darlingcv.dev)
+🌐 [Portafolio](https://www.darlingcv.dev)
