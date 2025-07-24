@@ -84,7 +84,7 @@ export const Banner = () => {
                     className="cv-download-btn"
                     onClick={() => {
                       const link = document.createElement("a");
-                      link.href = require("../assets/cv/CV-Darling-Fajardo-13072025.pdf");
+                      link.href = require("../assets/cv/CV-Darling-Fajardo.pdf");
                       link.download = "CV-Darling-Fajardo.pdf";
                       document.body.appendChild(link);
                       link.click();

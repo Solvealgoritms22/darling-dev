@@ -73,7 +73,7 @@ export const ProjectCard = ({ title, description, imgUrl, technologies = [], dem
           </div>
         </Modal.Body>
         <Modal.Footer className="justify-content-center">
-          <Button variant="gradient" href={demoUrl} target="_blank" className="me-2 demo-btn" style={{ color: "white" }}>
+          <Button variant="gradient" href={demoUrl} target="_blank" className="me-2 demo-btn" style={{ color: "white", filter: "grayscale(100%) opacity(50%)", border: "none" }} disabled>
             <FaExternalLinkAlt className="me-2" /> Ver Demo
           </Button>
           <Button variant="dark" href={githubUrl} target="_blank">

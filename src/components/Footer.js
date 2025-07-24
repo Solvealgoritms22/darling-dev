@@ -28,8 +28,8 @@ export const Footer = () => {
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/darling-fajardo-b44319154/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
-              <a href="https://github.com/Solvealgoritms22"><img src={navIcon2}  target="_blank" alt="GitHub" /></a>
-              <a href="https://www.instagram.com/darlingf.dev?igsh=MTUwdjVvZTE4cndnNQ%3D%3D&utm_source=qr"><img src={navIcon3}  target="_blank" alt="Instagram" /></a>
+                <a href="https://github.com/Solvealgoritms22" target="_blank" rel="noopener noreferrer"><img src={navIcon2} alt="GitHub" /></a>
+              <a href="https://www.instagram.com/darlingf.dev?igsh=MTUwdjVvZTE4cndnNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="Instagram" /></a>
             </div>
             <p>© 2025 darling.dev. Todos los derechos reservados.</p>
           </Col>
