@@ -1,36 +1,98 @@
-# Personal Portfolio Website in React
+# 🌟 Darling Dev
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Logo](public/logo512.png)
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://user-images.githubusercontent.com/50160672/174933373-1ba6cadf-1c9a-48c3-aa58-984d0bd62d82.png">
+## 📖 Descripción
+Darling Dev es un proyecto diseñado para mostrar habilidades, proyectos y logros profesionales de manera interactiva y visualmente atractiva. Este portafolio digital está optimizado para destacar tu experiencia y capacidades.
 
-Built using:
+---
 
-- Front-end library: React
-- CSS framework: React-bootstrap
-- CSS animations library: Animate.css
+## 🚀 Características
+- Diseño moderno y responsivo.
+- Sección de habilidades con visualizaciones.
+- Proyectos destacados con imágenes.
+- Contacto directo a través de formularios.
+- Integración con Mailchimp para suscripciones.
 
-In the /personal-portfolio, you can run:
+---
 
-### `npm start`
+## 🖼️ Capturas de Pantalla
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Página Principal
+![Página Principal](src/assets/img/banner-bg.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Sección de Proyectos
+![Proyectos](src/assets/img/project-img1.png)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologías Utilizadas
 
-### `npm run build`
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Instalación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/Solvealgoritms22/darling-dev.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd darling-dev
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm start
+   ```
+
+---
+
+## 📚 Uso
+
+1. Abre el navegador y navega a `http://localhost:3000`.
+2. Explora las secciones del portafolio.
+3. Utiliza el formulario de contacto para enviar mensajes.
+
+---
+
+## 🤝 Contribución
+
+¡Las contribuciones son bienvenidas! Sigue estos pasos:
+
+1. Haz un fork del proyecto.
+2. Crea una nueva rama:
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+3. Realiza tus cambios y haz un commit:
+   ```bash
+   git commit -m "Agrega nueva funcionalidad"
+   ```
+4. Haz un push a tu rama:
+   ```bash
+   git push origin feature/nueva-funcionalidad
+   ```
+5. Abre un Pull Request.
+
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
+## 📧 Contacto
+
+Darling Fajardo  
+✉️ [Correo Electrónico](mailto:darling.fajardo@example.com)  
+🌐 [Portafolio](https://darling-dev.example.com)
