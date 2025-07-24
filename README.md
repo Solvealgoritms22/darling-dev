@@ -1,7 +1,23 @@
-# 🌟 Darling Dev
+<div align="center">
 
-![Project Logo](public/logo512.png)
+# 🌟 DARLING.DEV
 
+## 🛠️ Tecnologías Utilizadas
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+</div>
+
+---
+
+🖼️ Portada
+
+![Project Logo](src/assets/img/mi-portfolio.png)
+
+---
 ## 📖 Descripción
 Darling Dev es un proyecto diseñado para mostrar habilidades, proyectos y logros profesionales de manera interactiva y visualmente atractiva. Este portafolio digital está optimizado para destacar tu experiencia y capacidades.
 
@@ -13,25 +29,6 @@ Darling Dev es un proyecto diseñado para mostrar habilidades, proyectos y logro
 - Proyectos destacados con imágenes.
 - Contacto directo a través de formularios.
 - Integración con Mailchimp para suscripciones.
-
----
-
-## 🖼️ Capturas de Pantalla
-
-### Página Principal
-![Página Principal](src/assets/img/banner-bg.png)
-
-### Sección de Proyectos
-![Proyectos](src/assets/img/project-img1.png)
-
----
-
-## 🛠️ Tecnologías Utilizadas
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
 ---
 
@@ -94,5 +91,5 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 ## 📧 Contacto
 
 Darling Fajardo  
-✉️ [Correo Electrónico](mailto:darling.fajardo@example.com)  
-🌐 [Portafolio](https://darling-dev.example.com)
+✉️ [Correo Electrónico](mailto:darlingf1998@gmail.com)  
+🌐 [Portafolio](https://darlingcv.dev)
