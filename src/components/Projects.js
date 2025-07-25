@@ -22,7 +22,7 @@ export const Projects = () => {
         { name: "TailwindCSS", version: "3.4.17", icon: "tailwindcss" },
         { name: "PrimeNG", version: "19.0.8", icon: "primeng" }
       ],
-      demoUrl: "https://skylink-demo.com",
+      demoUrl: "https://sky-link-frontend.vercel.app/",
       githubUrl: "https://github.com/Solvealgoritms22/SkyLink-Frontend"
     },
     {
@@ -34,7 +34,7 @@ export const Projects = () => {
         { name: "TailwindCSS", version: "3.4.17", icon: "tailwindcss" },
         { name: "PrimeNG", version: "19.0.8", icon: "primeng" }
       ],
-      demoUrl: "https://logistic-demo.com",
+      demoUrl: "https://logistic-nine-tan.vercel.app/",
       githubUrl: "https://github.com/Solvealgoritms22/Logistic"
     },
     {
@@ -46,7 +46,7 @@ export const Projects = () => {
         { name: "React", version: "19", icon: "react" },
         { name: "TailwindCSS", version: "3.4.17", icon: "tailwindcss" }
       ],
-      demoUrl: "https://backoffice-demo.com",
+      demoUrl: "https://tradesmartuinext.vercel.app/",
       githubUrl: "https://github.com/dfajardoCNE/Trade-Smart-UI-v2.1"
     },
   ];
@@ -64,7 +64,7 @@ export const Projects = () => {
         { name: "JWT", version: "v9.x", icon: "jwt" },
         { name: "Swagger", version: "v6.x", icon: "swagger" }
       ],
-      demoUrl: "https://universidad-api-demo.com",
+      demoUrl: "",
       githubUrl: "https://github.com/dfajardoCNE/university-api"
     },
   ];
@@ -80,7 +80,7 @@ export const Projects = () => {
         { name: "PrimeNG", version: "19.0.8", icon: "primeng" },
         { name: "Node.js", version: "19.0.8", icon: "nodejs" }
       ],
-      demoUrl: "https://emergencia-demo.com",
+      demoUrl: "https://catastrofe-alert-7s6fqn2c2-solvealgoritms22s-projects.vercel.app/",
       githubUrl: "https://github.com/Solvealgoritms22/CatastrofeAlert"
     },
   ];
