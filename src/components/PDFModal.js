@@ -13,14 +13,17 @@ export const PDFModal = ({ show, onHide, pdfPath, title }) => {
       <Modal.Header closeButton className="pdf-modal-header">
         <Modal.Title style={{ color: '#fff' }}>{title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body style={{ height: "80vh", padding: 0}}>
-        <iframe
-          src={pdfPath}
-          title={title}
-          width="100%"
-          height="100%"
-          style={{ border: "none", minHeight: "70vh" }}
-        />
+      <Modal.Body className="pdf-modal-body">
+        <div className="pdf-iframe-wrapper">
+          <iframe
+            src={pdfPath}
+            title={title}
+            width="100%"
+            height="100%"
+            style={{ border: "none" }}
+            allowFullScreen
+          />
+        </div>
       </Modal.Body>
     </Modal>
   );
