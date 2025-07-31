@@ -73,12 +73,12 @@ export const Education = () => {
                           <Card.Body>
                             <Card.Title style={{color:'#fff', textAlign: 'center'}}>COURSERA</Card.Title>
                             <Card.Text style={{color:'#cbd5e1', textAlign: 'center'}}>
-                              Introduction to IA<br/>
+                              Introduction to IA, Discover the Art of Prompting, Maximize Productivity With AI Tools <br/>
                               <a href="https://coursera.org" target="_blank" rel="noopener noreferrer" style={{color:'#60a5fa', textAlign: 'center'}}>coursera.org</a><br/>
                               <span style={{fontWeight:500, color:'#60a5fa', textAlign: 'center'}}>June 2025</span>
                             </Card.Text>
                             <div style={{textAlign:'center', marginTop:10}}>
-                              <Button className="btn-cert" size="sm" onClick={() => handleShowPDF(require('../assets/certificates/Introduction to IA.pdf'), 'Certificado Coursera')}>Ver Certificado</Button>
+                              <Button className="btn-cert" size="sm" onClick={() => handleShowPDF(require('../assets/certificates/coursera.pdf'), 'Certificados Coursera')}>Ver Certificados</Button>
                             </div>
                           </Card.Body>
                         </Card>
@@ -109,12 +109,12 @@ export const Education = () => {
                           <Card.Body>
                             <Card.Title style={{color:'#fff', textAlign: 'center'}}>CENTRO NACIONAL DE CIBERSEGURIDAD</Card.Title>
                             <Card.Text style={{color:'#cbd5e1', textAlign: 'center'}}>
-                              Seguridad de Terminales, Defensa de la red<br/>
+                              Seguridad de Terminales, Defensa de la red, Hacker ético, Introducción a la Ciberseguridad<br/>
                               <a href="https://netacad.com" target="_blank" rel="noopener noreferrer" style={{color:'#60a5fa', textAlign: 'center'}}>netacad.com</a><br/>
                               <span style={{fontWeight:500, color:'#60a5fa', textAlign: 'center'}}>Dec 2023 – May 2025</span>
                             </Card.Text>
                             <div style={{textAlign:'center', marginTop:10}}>
-                              <Button className="btn-cert" size="sm" onClick={() => handleShowPDF(require('../assets/certificates/cisco_curses.pdf'), 'Certificado Ciberseguridad')}>Ver Certificado</Button>
+                              <Button className="btn-cert" size="sm" onClick={() => handleShowPDF(require('../assets/certificates/cisco_curses.pdf'), 'Certificados Ciberseguridad')}>Ver Certificados</Button>
                             </div>
                           </Card.Body>
                         </Card>
