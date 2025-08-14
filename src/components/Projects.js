@@ -80,7 +80,7 @@ export const Projects = () => {
         { name: "PrimeNG", version: "19.0.8", icon: "primeng" },
         { name: "Node.js", version: "19.0.8", icon: "nodejs" }
       ],
-      demoUrl: "https://catastrofe-alert-7s6fqn2c2-solvealgoritms22s-projects.vercel.app/",
+      demoUrl: "https://catastrofe-alert.vercel.app/",
       githubUrl: "https://github.com/Solvealgoritms22/CatastrofeAlert"
     },
   ];
