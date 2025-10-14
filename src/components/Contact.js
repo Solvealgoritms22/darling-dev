@@ -1,29 +1,30 @@
-import { useState } from "react";
+import { useState, useCallback, memo, useMemo } from "react";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Contact = () => {
-  const formInitialDetails = {
+export const Contact = memo(() => {
+  const formInitialDetails = useMemo(() => ({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
     message: ''
-  }
+  }), []);
+  
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState('Enviar');
   const [status, setStatus] = useState({});
 
-  const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
+  const onFormUpdate = useCallback((category, value) => {
+      setFormDetails(prev => ({
+        ...prev,
         [category]: value
-      })
-  }
+      }));
+  }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
     let response = await fetch("https://darlingcv.dev/contact", {
@@ -47,7 +48,7 @@ export const Contact = () => {
       console.log("Attempting to clear status message.");
       setStatus({});
     }, 5000);
-  };
+  }, [formDetails, formInitialDetails]);
 
   return (
     <section className="contact" id="connect">
@@ -96,4 +97,4 @@ export const Contact = () => {
       </Container>
     </section>
   );
-};
+});

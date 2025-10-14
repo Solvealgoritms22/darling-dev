@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import colorSharp from "../assets/img/color-sharp.png"
 
 // Frameworks y tecnologías con sus logos
@@ -17,7 +17,7 @@ const backendFrameworks = [
 ];
 
 const databases = [
-  { name: 'SQLite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg', level: 88 },
+  { name: 'Firebase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg', level: 88 },
   { name: 'SQL Server', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg', level: 85 },
   { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', level: 90 },
   { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', level: 92 },
@@ -30,7 +30,7 @@ const devopsTools = [
   { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg', level: 85 },
 ];
 
-const SkillCard = ({ framework }) => {
+const SkillCard = memo(({ framework }) => {
   return (
     <div className="skill-card">
       <div className="skill-icon-container">
@@ -43,7 +43,7 @@ const SkillCard = ({ framework }) => {
       <span className="skill-percentage">{framework.level}%</span>
     </div>
   );
-};
+});
 
 export const Skills = () => {
   return (

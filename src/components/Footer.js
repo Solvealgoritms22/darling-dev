@@ -1,10 +1,11 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { memo } from "react";
 import { MailchimpForm } from "./MailchimpForm";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
-export const Footer = () => {
+export const Footer = memo(() => {
   return (
     <footer className="footer" style={{padding: '40px 0' }}>
       <Container>
@@ -27,14 +28,14 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/darling-fajardo-b44319154/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
-                <a href="https://github.com/Solvealgoritms22" target="_blank" rel="noopener noreferrer"><img src={navIcon2} alt="GitHub" /></a>
-              <a href="https://www.instagram.com/darlingf.dev?igsh=MTUwdjVvZTE4cndnNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="Instagram" /></a>
+              <a href="https://www.linkedin.com/in/darling-fajardo-b44319154/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" loading="lazy" /></a>
+                <a href="https://github.com/Solvealgoritms22" target="_blank" rel="noopener noreferrer"><img src={navIcon2} alt="GitHub" loading="lazy" /></a>
+              <a href="https://www.instagram.com/darlingf.dev?igsh=MTUwdjVvZTE4cndnNQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="Instagram" loading="lazy" /></a>
             </div>
             <p>© 2025 darling.dev. Todos los derechos reservados.</p>
           </Col>
         </Row>
       </Container>
     </footer>
-  )
-}
+  );
+});

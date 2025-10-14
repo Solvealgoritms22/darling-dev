@@ -1,5 +1,5 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-
+import { memo, useMemo } from "react";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/skylink.png";
 import projImg2 from "../assets/img/logistic.png";
@@ -10,9 +10,9 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Projects = () => {
+export const Projects = memo(() => {
 
-  const projects = [
+  const projects = useMemo(() => [
     {
       title: "Skylink Airlines",
       description: "SkyLink es una plataforma web moderna para la reservación de vuelos que conecta a los viajeros con múltiples aerolíneas en un solo lugar.",
@@ -49,9 +49,9 @@ export const Projects = () => {
       demoUrl: "https://tradesmartuinext.vercel.app/",
       githubUrl: "https://github.com/dfajardoCNE/Trade-Smart-UI-v2.1"
     },
-  ];
+  ], []);
 
-    const projects2 = [
+    const projects2 = useMemo(() => [
     {
       title: "Universidad API",
       description: "Este proyecto implementa una API RESTful para la gestión de una universidad, siguiendo los principios de Clean Architecture. Proporciona un sistema completo para administrar estudiantes, profesores, cursos, calificaciones y más.",
@@ -66,10 +66,10 @@ export const Projects = () => {
       ],
       demoUrl: "",
       githubUrl: "https://github.com/dfajardoCNE/university-api"
-    },
-  ];
+    }
+  ], []);
 
-    const projects3 = [
+    const projects3 = useMemo(() => [
     {
       title: "EMERGENCIA.DO - Plataforma de Emergencias",
       description: "EMERGENCIA.DO es una plataforma web moderna para informar sobre el paradero de civiles en situaciones críticas.",
@@ -83,7 +83,7 @@ export const Projects = () => {
       demoUrl: "https://catastrofe-alert.vercel.app/",
       githubUrl: "https://github.com/Solvealgoritms22/CatastrofeAlert"
     },
-  ];
+  ], []);
   return (
     <section className="project" id="projects" style={{background: 'linear-gradient(135deg, transparent 30%, #23283b 75%)', padding: '60px 0'}}>
       <Container>
@@ -159,4 +159,4 @@ export const Projects = () => {
       <img className="background-image-right" src={colorSharp2} alt="" />
     </section>
   )
-}
+});

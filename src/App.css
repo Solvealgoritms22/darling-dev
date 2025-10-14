@@ -252,6 +252,96 @@ input:focus, textarea:focus, select:focus {
   }
 }
 
+/* Contenedor de botones CV */
+.cv-buttons-container {
+  display: flex;
+  align-items: stretch;
+  margin-top: 60px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Botón Preview CV */
+.cv-preview-btn {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #fff !important;
+  border-radius: 15px;
+  padding: 10px 20px;
+  background: transparent !important;
+  transition: all 0.3s ease;
+  gap: 8px;
+  height: 48px;
+}
+
+.cv-preview-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown CV */
+.dropdown-toggle.cv-download-btn {
+  margin-top: 0 !important;
+  font-size: 18px;
+  padding: 10px 20px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  background: #151515 !important;
+  border: 1px solid #aa367c !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  min-width: 100%;
+}
+
+.dropdown-item {
+  color: #fff !important;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(90deg, #aa367c 0%, #492fbd 100%) !important;
+  color: #fff !important;
+}
+
+.flag-emoji {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .cv-buttons-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  
+  .cv-preview-btn {
+    justify-content: center;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  
+  .dropdown-toggle.cv-download-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 576px) {
   .container {
     padding-left: 15px;
@@ -540,7 +630,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
@@ -1653,3 +1743,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: translateY(0);
   }
 } */
+
+/* Estilos para el spinner de carga */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #666;
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optimización para imágenes */
+img {
+  loading: lazy;
+}
+
+/* Preload de fuentes críticas */
+@font-face {
+  font-display: swap;
+}

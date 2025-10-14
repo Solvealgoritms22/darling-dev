@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
@@ -7,28 +7,27 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 
-export const NavBar = () => {
+export const NavBar = memo(() => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+  const onScroll = useCallback(() => {
+    if (window.scrollY > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
     }
+  }, []);
 
+  useEffect(() => {
     window.addEventListener("scroll", onScroll);
-
     return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+  }, [onScroll]);
 
-  const onUpdateActiveLink = (value) => {
+  const onUpdateActiveLink = useCallback((value) => {
     setActiveLink(value);
-  }
+  }, []);
 
   return (
     <Router>
@@ -71,4 +70,4 @@ export const NavBar = () => {
       </Navbar>
     </Router>
   )
-}
+});

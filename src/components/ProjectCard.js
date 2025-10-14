@@ -1,13 +1,13 @@
 import { Col, Modal, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, memo, useCallback } from "react";
 import { FaGithub, FaExternalLinkAlt, FaReact, FaAngular, FaVuejs, FaNodeJs, FaBootstrap, FaDatabase } from "react-icons/fa";
 import { SiExpress, SiMui, SiVuetify, SiFirebase, SiRedux, SiMongodb, SiTailwindcss, SiPrimeng, SiNextdotjs, SiSwagger, SiPrisma, SiPostgresql, SiNestjs, SiJsonwebtokens } from "react-icons/si";
 
-export const ProjectCard = ({ title, description, imgUrl, technologies = [], demoUrl, githubUrl }) => {
+export const ProjectCard = memo(({ title, description, imgUrl, technologies = [], demoUrl, githubUrl }) => {
   const [showModal, setShowModal] = useState(false);
   
-  // Función para obtener el icono correspondiente
-  const getIcon = (iconName) => {
+  // Función para obtener el icono correspondiente - memoizada
+  const getIcon = useCallback((iconName) => {
     switch(iconName.toLowerCase()) {
       case 'react': return <FaReact />;
       case 'angular': return <FaAngular />;
@@ -30,13 +30,17 @@ export const ProjectCard = ({ title, description, imgUrl, technologies = [], dem
       case 'jwt': return <SiJsonwebtokens />;
       default: return <FaDatabase />;
     }
-  };
+  }, []);
+
+  // Memoizar handlers
+  const handleShowModal = useCallback(() => setShowModal(true), []);
+  const handleCloseModal = useCallback(() => setShowModal(false), []);
 
   return (
     <>
       <Col size={12} sm={6} md={4}>
-        <div className="proj-imgbx" onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
-          <img src={imgUrl} alt={title} />
+        <div className="proj-imgbx" onClick={handleShowModal} style={{ cursor: 'pointer' }}>
+          <img src={imgUrl} alt={title} loading="lazy" />
           <div className="proj-txtx" style={{ padding: '60px'}}>
             <h5>{title}</h5>
             <span style={{ fontSize: '12px'}}>{description}</span>
@@ -55,7 +59,7 @@ export const ProjectCard = ({ title, description, imgUrl, technologies = [], dem
       </Col>
 
       {/* Modal para ver demo y GitHub */}
-      <Modal show={showModal} onHide={() => setShowModal(false)} centered className="project-modal">
+      <Modal show={showModal} onHide={handleCloseModal} centered className="project-modal">
         <Modal.Header closeButton>
           <Modal.Title className="w-100 text-center">{title}</Modal.Title>
         </Modal.Header>
@@ -89,5 +93,5 @@ export const ProjectCard = ({ title, description, imgUrl, technologies = [], dem
         </Modal.Footer>
       </Modal>
     </>
-  )
-}
+  );
+});

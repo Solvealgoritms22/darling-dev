@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useCallback, memo } from "react";
 import { PDFModal } from "./PDFModal";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -9,16 +9,20 @@ import projectImg2 from '../assets/img/Google_career.webp';
 import projectImg3 from '../assets/img/udemy.png';
 import projectImg4 from '../assets/img/cisco.png';
 
-export const Education = () => {
+export const Education = memo(() => {
   const [showModal, setShowModal] = useState(false);
   const [pdfPath, setPdfPath] = useState("");
   const [pdfTitle, setPdfTitle] = useState("");
 
-  const handleShowPDF = (path, title) => {
+  const handleShowPDF = useCallback((path, title) => {
     setPdfPath(path);
     setPdfTitle(title);
     setShowModal(true);
-  };
+  }, []);
+
+  const handleCloseModal = useCallback(() => {
+    setShowModal(false);
+  }, []);
 
   return (
     <section className="education" id="education" style={{background: 'linear-gradient(135deg, transparent 60%, #23283b 100%)', padding: '60px 0'}}>
@@ -124,10 +128,10 @@ export const Education = () => {
                 </div>
               }
             </TrackVisibility>
-            <PDFModal show={showModal} onHide={() => setShowModal(false)} pdfPath={pdfPath} title={pdfTitle} />
+            <PDFModal show={showModal} onHide={handleCloseModal} pdfPath={pdfPath} title={pdfTitle} />
           </Col>
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+});

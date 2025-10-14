@@ -1,21 +1,62 @@
-import { useState, useEffect, useMemo } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import { Container, Row, Col, Button, Dropdown } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowDownCircle } from "react-bootstrap-icons";
+import { Eye, Download } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { PDFModal } from "./PDFModal";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(180 - Math.random() * 60);
+  const [showCVModal, setShowCVModal] = useState(false);
+  const [currentCV, setCurrentCV] = useState({ path: "", title: "", lang: "" });
+  
   const toRotate = useMemo(() => [
     "Desarrollador de Software",
     "FrontEnd Lead",
     "Programador Web",
   ], []);
   const period = 1200;
+
+  // CVs disponibles
+  const cvFiles = useMemo(() => ({
+    es: {
+      path: require("../assets/cv/CV–Darling-Fajardo-14-10-2025-es.pdf"),
+      title: "CV - Darling Fajardo (Español)",
+      filename: "CV-Darling-Fajardo-14-10-2025-es.pdf"
+    },
+    en: {
+      path: require("../assets/cv/CV–Darling-Fajardo-14-10-2025-en.pdf"),
+      title: "CV - Darling Fajardo (English)",
+      filename: "CV-Darling-Fajardo-14-10-2025-en.pdf"
+    }
+  }), []);
+
+  // Función para mostrar preview del CV
+  const handlePreviewCV = useCallback((lang = 'es') => {
+    const cv = cvFiles[lang];
+    setCurrentCV({ path: cv.path, title: cv.title, lang });
+    setShowCVModal(true);
+  }, [cvFiles]);
+
+  // Función para descargar CV
+  const handleDownloadCV = useCallback((lang = 'es') => {
+    const cv = cvFiles[lang];
+    const link = document.createElement("a");
+    link.href = cv.path;
+    link.download = cv.filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, [cvFiles]);
+
+  // Cerrar modal
+  const handleCloseModal = useCallback(() => {
+    setShowCVModal(false);
+  }, []);
 
   useEffect(() => {
     const tick = () => {
@@ -80,19 +121,32 @@ export const Banner = () => {
                     optimización de rendimiento web y mejora de UI/UX. Soy
                     nativo en Español y tengo un nivel técnico de inglés.
                   </p>
-                  <button
-                    className="cv-download-btn"
-                    onClick={() => {
-                      const link = document.createElement("a");
-                      link.href = require("../assets/cv/CV–Darling-Fajardo-14-10-2025-es.pdf");
-                      link.download = "CV-Darling-Fajardo-14-10-2025-es.pdf";
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }}
-                  >
-                    Descargar CV <ArrowDownCircle size={25} />
-                  </button>
+                  <div className="cv-buttons-container">
+                    <Button
+                      variant="outline-light"
+                      className="cv-preview-btn me-3"
+                      onClick={() => handlePreviewCV('es')}
+                    >
+                      <Eye size={20} className="me-2" />
+                      Ver CV
+                    </Button>
+                    
+                    <Dropdown>
+                      <Dropdown.Toggle variant="primary" className="cv-download-btn">
+                        <Download size={20} className="me-2" />
+                        Descargar CV
+                      </Dropdown.Toggle>
+                      
+                      <Dropdown.Menu style={{ width: "100%" }}>
+                        <Dropdown.Item onClick={() => handleDownloadCV('es')}>
+                          <span className="flag-emoji">🇪🇸</span> Español
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => handleDownloadCV('en')}>
+                          <span className="flag-emoji">🇺🇸</span> English
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
                 </div>
               )}
             </TrackVisibility>
@@ -112,6 +166,14 @@ export const Banner = () => {
           </Col>
         </Row>
       </Container>
+      
+      {/* Modal para preview del CV */}
+      <PDFModal
+        show={showCVModal}
+        onHide={handleCloseModal}
+        pdfPath={currentCV.path}
+        title={currentCV.title}
+      />
     </section>
   );
 };
