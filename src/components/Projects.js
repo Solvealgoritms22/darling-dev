@@ -6,6 +6,8 @@ import projImg2 from "../assets/img/logistic.png";
 import projImg3 from "../assets/img/trade-smart.png";
 import projImg4 from "../assets/img/university-api.png";
 import projImg5 from "../assets/img/emergencia.png";
+import projImg6 from "../assets/img/fiscaldo.png";
+import projImg7 from "../assets/img/afi-reservas.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -49,6 +51,19 @@ export const Projects = memo(() => {
       demoUrl: "https://tradesmartuinext.vercel.app/",
       githubUrl: "https://github.com/dfajardoCNE/Trade-Smart-UI-v2.1"
     },
+    {
+      title: "AFI Reservas - Dashboard de Fondos de Inversión",
+      description: "Plataforma moderna para la gestión y visualización de fondos de inversión, con dashboard interactivo que muestra capital invertido, rendimientos, y evolución del saldo.",
+      imgUrl: projImg7,
+      technologies: [
+        { name: "React", version: "18.x", icon: "react" },
+        { name: "Nextjs", version: "14.x", icon: "nextjs" },
+        { name: "TailwindCSS", version: "3.4.x", icon: "tailwindcss" },
+        { name: "Chart.js", version: "4.x", icon: "chartjs" }
+      ],
+      demoUrl: "https://afi-reservas.vercel.app/",
+      githubUrl: ""
+    },
   ], []);
 
     const projects2 = useMemo(() => [
@@ -82,6 +97,19 @@ export const Projects = memo(() => {
       ],
       demoUrl: "https://catastrofe-alert.vercel.app/",
       githubUrl: "https://github.com/Solvealgoritms22/CatastrofeAlert"
+    },
+    {
+      title: "FiscalDO - Sistema de Facturación Electrónica",
+      description: "Plataforma completa de facturación electrónica con análisis en tiempo real, gestión de ingresos/gastos, clientes, proveedores, reportes y certificados digitales para cumplimiento fiscal.",
+      imgUrl: projImg6,
+      technologies: [
+        { name: "React", version: "18.x", icon: "react" },
+        { name: "Firebase", version: "10.x", icon: "firebase" },
+        { name: "Node.js", version: "18.x", icon: "nodejs" },
+        { name: "TypeScript", version: "5.x", icon: "typescript" }
+      ],
+      demoUrl: "https://fiscaldo-fb51f.web.app/?view=invoices",
+      githubUrl: ""
     },
   ], []);
   return (
