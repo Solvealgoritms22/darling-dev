@@ -1,95 +1,67 @@
-<div align="center">
+# Once UI for Next.js
 
-# 🌟 DARLING.DEV
+A design system for indie builders, startups and freelancers. Once UI combines the simplicity of low-code with the power of code: write 70% less compared to shadcn + Tailwind. Includes 100+ advanced, open-source components.
 
-## 🛠️ Tecnologías Utilizadas
+Check the demo [here](https://demo.once-ui.com).
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Once UI](public/images/og/home.jpg)
 
-</div>
+## Features
 
----
+A lightweight starter template with the [Once UI Core](https://github.com/once-ui-system/core) package and our recommended setup.
 
-🖼️ Portada
+* **Customization**: Manage design config in a single file.
+* **Components**: Access advanced components with simple APIs.
+* **Data-viz**: Add responsive charts with a few lines of code.
+* **SEO**: Use our SEO components to simplify meta and schema setup.
+* **PRO**: Launch ready-made apps with minimal coding with Once UI Pro.
 
-![Project Logo](src/assets/img/mi-portfolio.png)
+## Documentation
 
----
-## 📖 Descripción
-Darling Dev es un proyecto diseñado para mostrar habilidades, proyectos y logros profesionales de manera interactiva y visualmente atractiva. Este portafolio digital está optimizado para destacar tu experiencia y capacidades.
+Learn how to build with Once UI at [docs.once-ui.com](https://docs.once-ui.com/once-ui/quick-start).
 
----
+## Quick start
 
-## 🚀 Características
-- Diseño moderno y responsivo.
-- Sección de habilidades con visualizaciones.
-- Proyectos destacados con imágenes.
-- Contacto directo a través de formularios.
-- Integración con Mailchimp para suscripciones.
+[Magic Portfolio](https://once-ui.com/products/magic-portfolio) (FREE): Portfolio starter used and loved by thousands of creatives. Simple, customizable, responsive.
 
----
+[Magic Docs](https://once-ui.com/products/magic-docs) (FREE): Documentation generator. Just add your MDX files and let Magic Docs handle the rest.
 
-## 📦 Instalación
+[Magic Convert](https://once-ui.com/products/magic-convert) (PRO): Conversion-optimized landing page and dashboard template.
 
-1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/Solvealgoritms22/darling-dev.git
-   ```
-2. Navega al directorio del proyecto:
-   ```bash
-   cd darling-dev
-   ```
-3. Instala las dependencias:
-   ```bash
-   npm install
-   ```
-4. Inicia el servidor de desarrollo:
-   ```bash
-   npm start
-   ```
+[Once UI Blocks](https://once-ui.com/blocks) (PRO): Copy-paste pre-designed blocks and deploy fully-functional sites with lightning speed.
 
----
+[Get Once UI Pro](https://once-ui.com/pricing)
 
-## 📚 Uso
+## Design
 
-1. Abre el navegador y navega a `http://localhost:3000`.
-2. Explora las secciones del portafolio.
-3. Utiliza el formulario de contacto para enviar mensajes.
+The design counterpart of the Once UI system is available [here](https://once-ui.com/figma).
 
----
+## Get started
 
-## 🤝 Contribución
+Clone the starter template from GitHub:
+```bash
+git clone https://github.com/once-ui-system/nextjs-starter.git
+```
 
-¡Las contribuciones son bienvenidas! Sigue estos pasos:
+## Creators
 
-1. Haz un fork del proyecto.
-2. Crea una nueva rama:
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-3. Realiza tus cambios y haz un commit:
-   ```bash
-   git commit -m "Agrega nueva funcionalidad"
-   ```
-4. Haz un push a tu rama:
-   ```bash
-   git push origin feature/nueva-funcionalidad
-   ```
-5. Abre un Pull Request.
+Connect with us!
 
----
+**Lorant One**: [Site](https://lorant.one)
 
-## 📜 Licencia
+**Design Engineers Club**: [Site](https://designengineers.club)
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+## Contribute
 
----
+Please use the Once UI Core [GitHub repository](https://github.com/once-ui-system/core) for design system contributions.
 
-## 📧 Contacto
+## Sponsors
 
-Darling Fajardo  
-✉️ [Correo Electrónico](mailto:darlingf1998@gmail.com)  
-🌐 [Portafolio](https://www.darlingcv.dev)
+Once UI is an indie project. [Sponsor us](https://github.com/sponsors/once-ui-system) and get featured on our site!
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+## Deploy to Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fnextjs-starter&project-name=nextjs-starter&repository-name=nextjs-starter&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fnextjs-starter&demo-title=Next.js%20Starter&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.nextjs-starter.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fnextjs-starter%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)

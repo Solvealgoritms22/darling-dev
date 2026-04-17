@@ -1,0 +1,167 @@
+import { SkillCategory, Project, Education } from "@/types";
+
+const skills: SkillCategory[] = [
+    {
+        category: "Frontend Development",
+        skills: [
+            { name: "React", icon: "react", level: "95%" },
+            { name: "Angular", icon: "angular", level: "90%" },
+            { name: "Next.js", icon: "nextjs", level: "93%" },
+            { name: "TypeScript", icon: "typescript", level: "92%" }
+        ]
+    },
+    {
+        category: "Backend Development",
+        skills: [
+            { name: "Node.js", icon: "node", level: "93%" },
+            { name: "Python", icon: "python", level: "88%" },
+            { name: "Django", icon: "django", level: "85%" },
+            { name: "Express", icon: "express", level: "90%" }
+        ]
+    },
+    {
+        category: "Databases",
+        skills: [
+            { name: "Firebase", icon: "firebase", level: "88%" },
+            { name: "SQL Server", icon: "sqlserver", level: "85%" },
+            { name: "MySQL", icon: "mysql", level: "90%" },
+            { name: "PostgreSQL", icon: "postgresql", level: "92%" }
+        ]
+    },
+    {
+        category: "DevOps & Cloud",
+        skills: [
+            { name: "Vercel", icon: "vercel", level: "92%" },
+            { name: "Azure DevOps", icon: "azure", level: "88%" },
+            { name: "GitHub Actions", icon: "githubactions", level: "90%" },
+            { name: "Docker", icon: "docker", level: "85%" }
+        ]
+    }
+];
+
+const projects: Project[] = [
+    {
+        title: "Skylink Airlines",
+        year: "2024",
+        description: "Modern web platform for flight reservations connecting travelers with multiple airlines in one place.",
+        tags: ["Angular", "TailwindCSS", "PrimeNG"],
+        link: "https://sky-link-frontend.vercel.app/",
+        image: "/images/projects/skylink.webp"
+    },
+    {
+        title: "Logistic Platform",
+        year: "2024",
+        description: "Modern logistics operations management platform, designed to optimize the supply chain and improve transport efficiency.",
+        tags: ["Angular", "TailwindCSS", "PrimeNG"],
+        link: "https://logistic-nine-tan.vercel.app/",
+        image: "/images/projects/logistic.webp"
+    },
+    {
+        title: "TradeSmart",
+        year: "2024",
+        description: "Modern automated trading platform, with animated UI, risk management and multilanguage support.",
+        tags: ["Next.js", "React", "TailwindCSS", "IndexedDB"],
+        link: "https://tradesmartuinext.vercel.app/",
+        image: "/images/projects/trade-smart.webp"
+    },
+    {
+        title: "AFI Reservas",
+        year: "2024",
+        description: "Interactive dashboard for managing and visualizing investment funds, returns and account statements.",
+        tags: ["React", "Next.js", "Chart.js", "IndexedDB"],
+        link: "https://afi-reservas.vercel.app/",
+        image: "/images/projects/afi-reservas.webp"
+    },
+    {
+        title: "University API",
+        year: "2023",
+        description: "RESTful API for university management following Clean Architecture principles, with NestJS and PostgreSQL.",
+        tags: ["Node.js", "NestJS", "Prisma", "PostgreSQL"],
+        link: "https://github.com/dfajardoCNE/university-api",
+        image: "/images/projects/university-api.webp"
+    }
+];
+
+const education: Education[] = [
+    {
+        institution: "AUTONOMOUS UNIVERSITY OF SANTO DOMINGO",
+        description: "Bachelor's Degree in Computer Science",
+        logo: "/images/logos/uasd.svg",
+        locked: true,
+        items: [
+            {
+                title: "Bachelor's Degree in Computer Science",
+                period: "Graduado",
+                description: "Comprehensive training in computer science, software development and information systems.",
+                pdf: "/certificates/placeholder.pdf"
+            }
+        ]
+    },
+    {
+        institution: "ORACLE ACADEMY",
+        description: "Database Design and Java Programming",
+        logo: "/images/logos/oracle.svg",
+        items: [
+            {
+                title: "Java Programming",
+                period: "May 2023",
+                description: "Advanced Java programming and database design certification.",
+                pdf: "/certificates/Java_Programming.pdf"
+            }
+        ]
+    },
+    {
+        institution: "COURSERA / GOOGLE",
+        description: "Specializations in IA and Productivity",
+        logo: "/images/logos/coursera.svg",
+        items: [
+            {
+                title: "IA and Productivity Pack",
+                period: "June 2025",
+                description: "Introduction to IA, Discover the Art of Prompting, Maximize Productivity With AI Tools.",
+                pdf: "/certificates/coursera.pdf"
+            }
+        ]
+    },
+    {
+        institution: "UDEMY",
+        description: "Specializations in Full Stack Development",
+        logo: "/images/logos/udemy.svg",
+        items: [
+            {
+                title: "Master en JavaScript, React, Angular & NodeJs",
+                period: "Oct 2023 – Apr 2024",
+                description: "Intensive training in modern frameworks (React, Angular 18, MERN Stack).",
+                pdf: "/certificates/udemy_curses.pdf"
+            }
+        ]
+    },
+    {
+        institution: "NATIONAL CYBERSECURITY CENTER / CISCO",
+        description: "Cybersecurity Trajectory",
+        logo: "/images/logos/cisco.svg",
+        items: [
+            {
+                title: "Ethical Hacker & Network Defense",
+                period: "Dec 2023 – May 2025",
+                description: "Certifications in Terminal Security, Network Defense and Cybersecurity.",
+                pdf: "/certificates/cisco_curses.pdf"
+            }
+        ]
+    },
+    {
+        institution: "AMERICAN DOMINICAN CULTURAL INSTITUTE",
+        description: "Formación Técnica e Idiomas",
+        logo: "/images/logos/dominico.png",
+        items: [
+            {
+                title: "Software Architecture",
+                period: "2024",
+                description: "Advanced specialization in design patterns, scalability and modern system structures according to architectural standards.",
+                pdf: "/certificates/Aruitectura_De_Software.pdf"
+            },
+        ]
+    }
+];
+
+export { skills, projects, education };
