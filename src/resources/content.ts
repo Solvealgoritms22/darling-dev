@@ -41,6 +41,22 @@ const skills: SkillCategory[] = [
 
 const projects: Project[] = [
     {
+        title: "FiscalDO",
+        year: "2025",
+        description: "Futuristic electronic invoicing platform for tax compliance in DR, featuring AI (Gemini) OCR, obsidian glass aesthetics, and modular architecture.",
+        tags: ["React 19", "Google Gemini", "Firebase", "TailwindCSS"],
+        link: "https://fiscaldo-fb51f.web.app/",
+        image: "/images/projects/fiscaldo.png"
+    },
+    {
+        title: "Politica.do",
+        year: "2025",
+        description: "High-performance news portal for Dominican politics and economy, featuring real-time updates and a clean journalistic aesthetic.",
+        tags: ["Next.js", "TailwindCSS", "Vercel"],
+        link: "https://politica-do.vercel.app/",
+        image: "/images/projects/politica-do.png"
+    },
+    {
         title: "Skylink Airlines",
         year: "2024",
         description: "Modern web platform for flight reservations connecting travelers with multiple airlines in one place.",
