@@ -8,7 +8,7 @@ const meta = {
     title: "Darling Dev | Software Developer",
     description:
       "Official portfolio of Darling Fajardo (Darling Dev). Building high-performance software and unique digital experiences.",
-    image: "/images/og/home.jpg",
+    image: "/images/og/darling-dev-og.png",
     canonical: "https://darlingcv.dev",
     robots: "index,follow",
     alternates: [{ href: "https://darlingcv.dev", hrefLang: "en" }],
@@ -22,7 +22,7 @@ const schema = {
   type: "Person",
   name: "Darling Fajardo",
   description: meta.home.description,
-  email: "hello@darlingcv.dev",
+  email: "darlingf1998@gmail.com",
 };
 
 export { meta, schema, baseURL };
