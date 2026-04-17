@@ -52,7 +52,7 @@ const projects: Project[] = [
         title: "Politica.do",
         year: "2025",
         description: "High-performance news portal for Dominican politics and economy, featuring real-time updates and a clean journalistic aesthetic.",
-        tags: ["Next.js", "TailwindCSS", "Vercel"],
+        tags: ["Next.js", "TailwindCSS", "Vercel", "NeonDB"],
         link: "https://politica-do.vercel.app/",
         image: "/images/projects/politica-do.png"
     },
