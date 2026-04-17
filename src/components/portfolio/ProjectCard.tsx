@@ -42,7 +42,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority }) =
             border="neutral-alpha-weak"
             background="neutral-alpha-weak"
             className="project-card-wrapper"
-            style={{ minWidth: '320px', cursor: 'pointer' }}
+            style={{ 
+                minWidth: 'calc(100vw - 48px)',
+                maxWidth: 'var(--mobile-card-max-width, 360px)',
+                cursor: 'pointer' 
+            }}
             onClick={() => window.open(project.link, '_blank')}
         >
             <Flex position="relative" overflow="hidden" className="project-card-hover" style={{ height: '200px' }}>

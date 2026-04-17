@@ -102,8 +102,9 @@ export const ProjectsSection = () => {
                         msOverflowStyle: 'none',
                         scrollSnapType: 'x mandatory',
                         WebkitOverflowScrolling: 'touch',
-                        paddingLeft: '16px',
-                        paddingRight: '16px',
+                        paddingLeft: '24px',
+                        paddingRight: '24px',
+                        gap: '12px'
                     }}
                 >
                     {projects.map((project, i) => (
@@ -113,7 +114,7 @@ export const ProjectsSection = () => {
                             fillHeight
                             direction="column"
                             className="project-card-slot"
-                            style={{ scrollSnapAlign: 'start' }}
+                            style={{ scrollSnapAlign: 'center' }}
                         >
                             <RevealFx
                                 speed="fast"
