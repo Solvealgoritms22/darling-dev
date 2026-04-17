@@ -9,7 +9,7 @@ export interface SkillCategory {
     skills: Skill[];
 }
 
-export interface Project {
+export interface Project { // TODO: Update this interface
     title: string;
     year: string;
     description: string;
