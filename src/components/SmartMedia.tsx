@@ -17,19 +17,20 @@ const isSvg = (src?: string) =>
  * - We do NOT control the `loading` prop; Next.js Image handles lazy loading
  *   natively (lazy by default, preloaded when priority=true is set).
  */
-export const SmartMedia: React.FC<React.ComponentProps<typeof Media>> = (props) => {
+export const SmartMedia: React.FC<React.ComponentProps<typeof Media> & { overflowVisible?: boolean }> = (props) => {
+    const { overflowVisible, ...rest } = props;
     const skipSkeleton = !!props.priority || isSvg(props.src as string);
     const [isLoaded, setIsLoaded] = useState(skipSkeleton);
 
     return (
-        <div style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}>
+        <div style={{ position: 'relative', width: '100%', height: '100%', overflow: overflowVisible ? 'visible' : 'hidden' }}>
             {!isLoaded && (
                 <div style={{ position: 'absolute', inset: 0, zIndex: 2 }}>
                     <Skeleton shape="block" fillWidth style={{ height: '100%' }} />
                 </div>
             )}
             <Media
-                {...props}
+                {...rest}
                 aspectRatio={props.aspectRatio || (props.fill ? '16 / 9' : undefined)}
                 onLoad={() => setIsLoaded(true)}
                 onError={() => setIsLoaded(true)}

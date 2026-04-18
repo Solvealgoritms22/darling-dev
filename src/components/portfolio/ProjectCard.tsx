@@ -43,8 +43,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority }) =
             background="neutral-alpha-weak"
             className="project-card-wrapper"
             style={{ 
-                minWidth: 'calc(100vw - 48px)',
-                maxWidth: 'var(--mobile-card-max-width, 360px)',
                 cursor: 'pointer' 
             }}
             onClick={() => window.open(project.link, '_blank')}
@@ -75,7 +73,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, priority }) =
                     />
                 </Flex>
             </Flex>
-            <Column padding="20" gap="16" flex={1}>
+            <Column flex={1} className="project-card-content">
                 <Row horizontal="between" vertical="center">
                     <Text variant="heading-default-m">{project.title}</Text>
                     <Text variant="body-default-xs" onBackground="neutral-weak">{project.year}</Text>

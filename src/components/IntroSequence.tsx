@@ -49,7 +49,7 @@ const IntroSequence: React.FC<IntroSequenceProps> = ({ onStart }) => {
                         transition={{ duration: 0.8 }}
                         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                     >
-                        <div className="splash-logo-large logo-reveal logo-glitch">
+                        <div className="splash-logo-large logo-reveal">
                             Df
                         </div>
                         

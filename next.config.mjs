@@ -17,6 +17,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  transpilePackages: ['@once-ui-system/core'],
 };
 
 export default nextConfig;

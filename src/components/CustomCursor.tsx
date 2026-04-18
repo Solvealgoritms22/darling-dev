@@ -7,6 +7,8 @@ const CustomCursor: React.FC = () => {
     const [isHovering, setIsHovering] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
 
+    const [isDesktop, setIsDesktop] = useState(false);
+
     const mouseX = useMotionValue(-100);
     const mouseY = useMotionValue(-100);
 
@@ -15,6 +17,23 @@ const CustomCursor: React.FC = () => {
     const springY = useSpring(mouseY, springConfig);
 
     useEffect(() => {
+        const checkDesktop = () => {
+            const isHoverMode = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            const isMobileScreen = window.innerWidth <= 768;
+            setIsDesktop(isHoverMode && !isMobileScreen);
+        };
+
+        checkDesktop();
+        window.addEventListener('resize', checkDesktop);
+
+        return () => {
+            window.removeEventListener('resize', checkDesktop);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!isDesktop) return;
+
         const moveMouse = (e: MouseEvent) => {
             if (!isVisible) setIsVisible(true);
             mouseX.set(e.clientX);
@@ -43,9 +62,9 @@ const CustomCursor: React.FC = () => {
             window.removeEventListener('mousemove', moveMouse);
             window.removeEventListener('mouseover', handleOver);
         };
-    }, [mouseX, mouseY, isVisible]);
+    }, [mouseX, mouseY, isVisible, isDesktop]);
 
-    if (!isVisible) return null;
+    if (!isDesktop || !isVisible) return null;
 
     return (
         <>

@@ -51,7 +51,7 @@ export const ProjectsSection = () => {
                     left="8"
                     zIndex="10"
                     className="carousel-nav"
-                    style={{ top: '50%', transform: 'translateY(-50%)' }}
+                    style={{ top: '40%', transform: 'translateY(-50%)', left: '0' }}
                 >
                     <IconButton
                         icon="chevron-right"
@@ -71,7 +71,7 @@ export const ProjectsSection = () => {
                     right="8"
                     zIndex="10"
                     className="carousel-nav"
-                    style={{ top: '50%', transform: 'translateY(-50%)' }}
+                    style={{ top: '40%', transform: 'translateY(-50%)', right: '0' }}
                 >
                     <IconButton
                         icon="chevron-right"
@@ -86,8 +86,8 @@ export const ProjectsSection = () => {
                 </Flex>
 
                 {/* Edge Fades */}
-                <Fade zIndex="1" to="right" fillHeight width={8} position="absolute" left="0" top="0" style={{ pointerEvents: 'none' }} />
-                <Fade zIndex="1" to="left" fillHeight width={8} position="absolute" right="0" top="0" style={{ pointerEvents: 'none' }} />
+                <Fade zIndex="1" to="right" fillHeight width={4} position="absolute" left="0" top="0" style={{ pointerEvents: 'none' }} />
+                <Fade zIndex="1" to="left" fillHeight width={4} position="absolute" right="0" top="0" style={{ pointerEvents: 'none' }} />
 
                 {/* Scrollable Container */}
                 <Row
@@ -100,11 +100,7 @@ export const ProjectsSection = () => {
                         overflowX: 'scroll',
                         scrollbarWidth: 'none',
                         msOverflowStyle: 'none',
-                        scrollSnapType: 'x mandatory',
-                        WebkitOverflowScrolling: 'touch',
-                        paddingLeft: '24px',
-                        paddingRight: '24px',
-                        gap: '12px'
+                        WebkitOverflowScrolling: 'touch'
                     }}
                 >
                     {projects.map((project, i) => (
@@ -114,7 +110,6 @@ export const ProjectsSection = () => {
                             fillHeight
                             direction="column"
                             className="project-card-slot"
-                            style={{ scrollSnapAlign: 'center' }}
                         >
                             <RevealFx
                                 speed="fast"

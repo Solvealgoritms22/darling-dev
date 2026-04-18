@@ -61,8 +61,8 @@ body {
     backface-visibility: hidden;
     will-change: transform;
     isolation: isolate;
-    z-index: 9998 !important;
-    /* Slightly lower than cursor */
+    z-index: 20 !important;
+    /* Lowered to allow modals (typically z-index 100+) to overlay properly */
 }
 
 #custom-cursor {
@@ -72,6 +72,23 @@ body {
     /* Absolute top priority */
     transform: translateZ(0);
     will-change: transform;
+}
+
+/* Modal Stacking Override to guarantee visibility above all layout elements */
+[role="dialog"],
+[role="presentation"] > [role="dialog"],
+.once-dialog,
+.once-modal,
+[data-once-overlay] {
+    z-index: 9990 !important;
+}
+
+/* Modal Backdrop Blur Effect */
+[class*="Dialog_overlay"],
+.bg-overlay,
+dialog::backdrop {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
 }
 
 @keyframes kofi-pulse {
@@ -106,7 +123,7 @@ body {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    z-index: 50;
+    z-index: 20;
 }
 
 @media (max-width: 768px) {
@@ -185,21 +202,12 @@ body {
     scrollbar-color: var(--neutral-alpha-medium) transparent;
 }
 
-/* Logo Df styling */
-.logo-df {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
-    color: var(--neutral-on-background-strong);
-    text-shadow: 0 0 12px var(--brand-alpha-medium);
-    z-index: 100;
-    transition: opacity 0.3s ease;
-}
 
 .logo-df-wrapper {
     position: fixed;
     top: 2rem;
     left: 2rem;
-    z-index: 50;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -370,11 +378,17 @@ body {
         padding: 0 8px;
     }
 
-    .macro-icon,
+    .macro-icon {
+        width: auto !important;
+        height: 40px !important;
+        min-width: 40px;
+    }
+
     .macro-icon svg,
     .macro-icon img,
-    .macro-icon picture {
-        width: 40px !important;
+    .macro-icon picture,
+    .macro-icon > * {
+        width: auto !important;
         height: 40px !important;
         object-fit: contain !important;
     }
@@ -432,8 +446,66 @@ body {
     align-items: stretch !important;
 }
 
+/* Responsive Project Carousel */
+@media (max-width: 768px) {
+    .projects-scroll-container {
+        scroll-snap-type: x mandatory !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        gap: 12px !important;
+    }
+
+    .project-card-slot {
+        scroll-snap-align: center !important;
+    }
+
+    .project-card-wrapper {
+        min-width: calc(100vw - 48px) !important;
+        max-width: 360px !important;
+    }
+
+    .project-card-hover {
+        height: 140px !important;
+    }
+
+    .project-card-content {
+        padding: 16px !important;
+        gap: 12px !important;
+    }
+
+    /* Tools Carousel Overrides */
+    .carousel-fade-left,
+    .carousel-fade-right {
+        width: 12px !important;
+    }
+
+    .tools-autoscroll {
+        gap: 32px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .projects-scroll-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        gap: 24px !important;
+    }
+
+    .project-card-wrapper {
+        min-width: 360px !important;
+        max-width: 360px !important;
+    }
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+}
+
 .project-card-slot,
-.project-card-slot>div,
+.project-card-slot > div,
 .project-card-wrapper {
     height: 100% !important;
     display: flex !important;
@@ -515,7 +587,7 @@ body {
     display: none;
 }
 
-.kofi-glow, .logo-glitch, .focus-reveal {
+.kofi-glow, .focus-reveal {
     will-change: transform, opacity, filter;
 }
 
@@ -524,48 +596,7 @@ body {
     transform: translateZ(0);
 }
 
-.logo-glitch {
-    position: relative;
-    animation: glitch-main 4s infinite;
-}
 
-.logo-glitch::before,
-.logo-glitch::after {
-    content: "Df";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-}
-
-.logo-glitch::before {
-    color: #0ff;
-    z-index: -1;
-    animation: glitch-effect 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-}
-
-.logo-glitch::after {
-    color: #f0f;
-    z-index: -2;
-    animation: glitch-effect 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-}
-
-@keyframes glitch-main {
-    0%, 90%, 100% { transform: scale(1); filter: blur(0); }
-    92% { transform: scale(1.02) skewX(2deg); filter: blur(1px); }
-    95% { transform: scale(0.98) skewX(-2deg); }
-}
-
-@keyframes glitch-effect {
-    0% { transform: translate(0); }
-    20% { transform: translate(-3px, 3px); }
-    40% { transform: translate(-3px, -3px); }
-    60% { transform: translate(3px, 3px); }
-    80% { transform: translate(3px, -3px); }
-    100% { transform: translate(0); }
-}
 
 .progress-bar-container {
     width: 200px;

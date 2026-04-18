@@ -60,7 +60,7 @@ const projects: Project[] = [
         title: "Skylink Airlines",
         year: "2024",
         description: "Modern web platform for flight reservations connecting travelers with multiple airlines in one place.",
-        tags: ["Angular", "TailwindCSS", "PrimeNG"],
+        tags: ["Angular", "TailwindCSS", "PrimeNG", "IndexedDB"],
         link: "https://sky-link-frontend.vercel.app/",
         image: "/images/projects/skylink.webp"
     },
@@ -68,7 +68,7 @@ const projects: Project[] = [
         title: "Logistic Platform",
         year: "2024",
         description: "Modern logistics operations management platform, designed to optimize the supply chain and improve transport efficiency.",
-        tags: ["Angular", "TailwindCSS", "PrimeNG"],
+        tags: ["Angular", "TailwindCSS", "PrimeNG", "IndexedDB"],
         link: "https://logistic-nine-tan.vercel.app/",
         image: "/images/projects/logistic.webp"
     },
