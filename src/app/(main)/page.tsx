@@ -23,6 +23,10 @@ import { HeroSection } from '@/components/hero/HeroSection';
 import { ToolsCarousel } from '@/components/hero/ToolsCarousel';
 import { ProjectsSection } from '@/components/portfolio/ProjectsSection';
 import { EducationSection } from '@/components/portfolio/EducationSection';
+import { ServicesSection } from '@/components/portfolio/ServicesSection';
+import { ExperienceSection } from '@/components/portfolio/ExperienceSection';
+import { ContactSection } from '@/components/portfolio/ContactSection';
+import { SkillsSection } from '@/components/portfolio/SkillsSection';
 import { SmartMedia } from '@/components/SmartMedia';
 import { HomeClientWrapper } from '@/components/HomeClientWrapper';
 import { PhaseGauge } from '@/components/hero/PhaseGauge';
@@ -74,7 +78,9 @@ export default function Home() {
                     <ToolsCarousel />
                 </Flex>
 
-                {/* Resume Section */}
+                <ServicesSection />
+
+                {/* Biography & Skills Section */}
                 <Flex
                     fillWidth
                     maxWidth="xl"
@@ -143,6 +149,9 @@ export default function Home() {
                             <Text variant="body-default-m" onBackground="neutral-weak" className="text-balance">
                                 My approach focuses on the intersection of technical engineering and visual elegance. I believe that great software should not only function flawlessly but also delight the end user through seamless interactions and refined aesthetics.
                             </Text>
+                            
+                            <Heading variant="display-default-xs" style={{ marginTop: '24px', marginBottom: '8px' }}>Tech Stack</Heading>
+                            <SkillsSection />
                         </Column>
                         
                         {/* Self-contained Resume Control */}
@@ -150,9 +159,13 @@ export default function Home() {
                     </Column>
                 </Flex>
 
+                <ExperienceSection />
+
                 <ProjectsSection />
 
                 <EducationSection />
+                
+                <ContactSection />
 
                 {/* Footer Section - Restored with full content */}
                 <Column fillWidth className="section-padding" paddingX="l" gap="64" horizontal="center">

@@ -1,4 +1,4 @@
-import { SkillCategory, Project, Education } from "@/types";
+import { SkillCategory, Project, Education, Experience, Service } from "@/types";
 
 const skills: SkillCategory[] = [
     {
@@ -180,4 +180,55 @@ const education: Education[] = [
     }
 ];
 
-export { skills, projects, education };
+const services: Service[] = [
+    {
+        title: "Frontend Architecture",
+        description: "Building scalable, high-performance web applications using modern frameworks like React, Next.js, and complex CSS architectures.",
+        icon: "layout"
+    },
+    {
+        title: "Backend & APIs",
+        description: "Designing robust RESTful APIs, data pipelines, and serverless backends with Node.js, Express, and PostgreSQL.",
+        icon: "server"
+    },
+    {
+        title: "Digital Transformation",
+        description: "Upgrading legacy systems to modern cloud infrastructure, ensuring optimized performance and technical maintainability.",
+        icon: "diamond"
+    }
+];
+
+const experience: Experience[] = [
+    {
+        company: "Comisión Nacional de Energía",
+        logo: "/images/image.png",
+        items: [
+            {
+                role: "Software Developer",
+                period: "Feb 2022 - Present",
+                description: "Lead developer for institutional web platforms, focusing on frontend performance, modern UI/UX implementation, and robust, scalable architectures.",
+                achievements: [
+                    "Developed and maintained complex institutional portals and internal management systems.",
+                    "Led the modernization of legacy applications into modular, high-performance web applications."
+                ]
+            }
+        ]
+    },
+    {
+        company: "Freelancer",
+        logo: "FiCode",
+        items: [
+            {
+                role: "Full Stack Developer",
+                period: "2021 - Present",
+                description: "Design and development of custom web applications, specialized dashboards, and digital solutions for independent clients.",
+                achievements: [
+                    "Delivered high-fidelity interactive platforms and logistics dashboards.",
+                    "Provided end-to-end technical consulting and architecture design for modern startups."
+                ]
+            }
+        ]
+    }
+];
+
+export { skills, projects, education, services, experience };

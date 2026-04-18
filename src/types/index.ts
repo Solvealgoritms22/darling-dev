@@ -32,3 +32,22 @@ export interface Education {
     locked?: boolean;
     items: EducationItem[];
 }
+
+export interface Service {
+    title: string;
+    description: string;
+    icon: string;
+}
+
+export interface ExperienceItem {
+    role: string;
+    period: string;
+    description: string;
+    achievements?: string[];
+}
+
+export interface Experience {
+    company: string;
+    logo?: string;
+    items: ExperienceItem[];
+}
