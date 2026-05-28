@@ -65,7 +65,7 @@ const HomeClientContent: React.FC<HomeClientWrapperProps> = ({ children }) => {
                                 </Text>
                                 <Button
                                     variant="secondary"
-                                    onClick={() => window.open('/resume.pdf')}
+                                    onClick={() => window.open('/resume-en.pdf')}
                                 >
                                     <Flex gap="8" vertical="center">
                                         <Icon name="download" size="s" />

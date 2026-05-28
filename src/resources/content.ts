@@ -107,7 +107,7 @@ const education: Education[] = [
         items: [
             {
                 title: "Bachelor's Degree in Computer Science",
-                period: "Graduado",
+                period: "Present",
                 description: "Comprehensive training in computer science, software development and information systems.",
                 pdf: "/certificates/placeholder.pdf"
             }
@@ -133,7 +133,7 @@ const education: Education[] = [
         items: [
             {
                 title: "IA and Productivity Pack",
-                period: "June 2025",
+                period: "Aug 2025",
                 description: "Introduction to IA, Discover the Art of Prompting, Maximize Productivity With AI Tools.",
                 pdf: "/certificates/coursera.pdf"
             }
@@ -146,7 +146,7 @@ const education: Education[] = [
         items: [
             {
                 title: "Master en JavaScript, React, Angular & NodeJs",
-                period: "Oct 2023 – Apr 2024",
+                period: "October 2023 – April 2024",
                 description: "Intensive training in modern frameworks (React, Angular 18, MERN Stack).",
                 pdf: "/certificates/udemy_curses.pdf"
             }
@@ -159,7 +159,7 @@ const education: Education[] = [
         items: [
             {
                 title: "Ethical Hacker & Network Defense",
-                period: "Dec 2023 – May 2025",
+                period: "December 2023 – May 2025",
                 description: "Certifications in Terminal Security, Network Defense and Cybersecurity.",
                 pdf: "/certificates/cisco_curses.pdf"
             }
@@ -172,7 +172,7 @@ const education: Education[] = [
         items: [
             {
                 title: "Software Architecture",
-                period: "2024",
+                period: "April 2026",
                 description: "Advanced specialization in design patterns, scalability and modern system structures according to architectural standards.",
                 pdf: "/certificates/Aruitectura_De_Software.pdf"
             },

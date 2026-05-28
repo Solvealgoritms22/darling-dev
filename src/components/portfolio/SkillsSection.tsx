@@ -6,13 +6,13 @@ import { skills } from "@/resources/content";
 
 export const SkillsSection = () => {
     return (
-        <Flex direction="column" gap="24">
+        <Flex direction="column" gap="24" className="skills-section">
             {skills.map((category) => (
-                <Column key={category.category} gap="12">
-                    <Text variant="body-default-s" onBackground="neutral-weak">
+                <Column key={category.category} gap="12" className="skills-category">
+                    <Text variant="body-default-s" onBackground="neutral-weak" className="skills-category-title">
                         {category.category}
                     </Text>
-                    <Flex wrap gap="12">
+                    <Flex wrap gap="12" className="skills-list">
                         {category.skills.map((skill) => (
                             <Flex
                                 key={skill.name}
@@ -23,6 +23,7 @@ export const SkillsSection = () => {
                                 border="neutral-alpha-weak"
                                 radius="m"
                                 background="neutral-alpha-weak"
+                                className="skill-chip"
                             >
                                 <Icon name={skill.icon} size="s" onBackground="neutral-medium" />
                                 <Flex direction="column">

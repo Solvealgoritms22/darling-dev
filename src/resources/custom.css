@@ -418,6 +418,26 @@ dialog::backdrop {
         align-items: center !important;
         text-align: center !important;
     }
+
+    .skills-section,
+    .skills-category,
+    .skills-list {
+        width: 100% !important;
+    }
+
+    .skills-section,
+    .skills-category {
+        align-items: center !important;
+    }
+
+    .skills-category-title {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .skills-list {
+        justify-content: center !important;
+    }
 }
 
 /* Project Card Alignment & Truncation */
