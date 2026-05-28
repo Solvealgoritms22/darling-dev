@@ -166,8 +166,8 @@ const education: Education[] = [
         ]
     },
     {
-        institution: "AMERICAN DOMINICAN CULTURAL INSTITUTE",
-        description: "Formación Técnica e Idiomas",
+        institution: "American Dominican University",
+        description: "Technical Training in Software Architecture",
         logo: "/images/logos/dominico.png",
         items: [
             {
